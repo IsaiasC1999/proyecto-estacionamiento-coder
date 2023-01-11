@@ -1,0 +1,30 @@
+.header{
+  height: 60px;
+  width: 100%;
+  background-color: #2E4053;
+  display: flex;
+  padding: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+
+.eti-input{
+  font-weight: bold;
+  margin: 4px 0px;
+}
+
+.btn{
+  width: 100%;
+}
+
+.header-nav-toggle{
+  display: none;
+}
+
+
+.header-nav-btn{
+  background-color: #7d8fa4;
+  color: white;
+}
