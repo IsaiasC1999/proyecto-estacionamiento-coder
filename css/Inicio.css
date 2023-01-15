@@ -1,14 +1,23 @@
+
+
 .header{
-  height: 60px;
+  height: 70px;
   width: 100%;
-  background-color: #2E4053;
+  
   display: flex;
   padding: 0px 10px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: white;
 }
 
+body{
+  background: linear-gradient(103deg, rgba(20,20,31,0.9023984593837535) 99%, rgba(20,20,31,0.8407738095238095) 100%) 
+  , url(../img/egor-myznik-rCZQCbUAQvg-unsplash\ \(1\)-2.webp), center;
+  background-size:cover;
+  
+   
+}
 
 .eti-input{
   font-weight: bold;
@@ -17,6 +26,7 @@
 
 .btn{
   width: 100%;
+  margin-top: 15px;
 }
 
 .header-nav-toggle{
@@ -25,6 +35,89 @@
 
 
 .header-nav-btn{
-  background-color: #7d8fa4;
+  background-color: #24292f;
   color: white;
+  padding: 6px;
+  border: 1px solid white;
+  border-radius: 7px;
+  font-weight:500;
+}
+
+
+/* header nav  */
+
+.header-nav-toggle{
+    list-style: none;
+}
+
+.header-nav-toggle ul {
+  list-style: none;
+  display: flex;
+
+}
+.header-nav-toggle ul li {
+   margin: 0px 20px;
+   font-weight: 500;
+   font-size: 19px;
+}
+
+/* Section home */
+
+.section-home{
+  
+  width: 90%;
+  height: 80vh;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  
+  
+
+}
+
+.section-home-subtitulo{
+  color: #979A9A ;
+}
+
+
+
+/* section - listado */
+
+.section-listado{
+  
+  width: 90%;
+  margin: 20px auto; 
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
+
+.section-listado-info{
+  width: 40%;
+  text-align: center;
+}
+
+.table {
+  background-color: #6c757d;
+}
+.section-listado-tabla{
+  width: 60%;
+  color: white;
+  height: 450px;
+}
+
+
+/* modal registro  */
+
+.span-mensaje-registro{
+  color: red;
+  font-weight: bold;
+  display: none;
 }

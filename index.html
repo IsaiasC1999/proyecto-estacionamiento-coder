@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/Inicio.css">
@@ -15,26 +14,53 @@
 
 <body>
   <header class="header">
-    <h2 class="header-titulo">Titulo</h2>
+    <h2 class="header-titulo">Park.com</h2>
     <nav class="header-nav">
-      <button class="header-nav-btn" id="btn-login">Iniciar Sesion</button>
-      <button class="header-nav-btn" id="btn-registrar">Registrarse</button>
+      <button class="header-nav-btn" id="btn-open-login">Iniciar Sesion</button>
+      <button class="header-nav-btn" id="btn-open-registrar">Registrarse</button>
     </nav>
-    <nav class="header-nav-toggle">
+    <nav class="header-nav-toggle" id="nav-toggle">
       <ul>
         <li class="header-nav-toggle-li">Inicio</li>
         <li class="header-nav-toggle-li">Chat</li>
         <li class="header-nav-toggle-li">Perfil</li>
+        <button class="btn-cerrar-sesion" id="btn-cerrar-sesion">Cerrar Sesion</button>
       </ul>
+     
     </nav>
   </header>
   <!-- Section Home-->
-  <section class="section-home">
-    <h2>Bienvenido a la Park.com</h2>
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eveniet autem nemo hic beatae, nostrum excepturi
-      officia recusandae, unde, architecto blanditiis consectetur? Eum beatae esse iusto asperiores quibusdam numquam
-      sed.</h3>
+  <section class="section-home" id="section-home">
+    <h1>Bienvenido a Park.com</h1>
+    <h5 class="section-home-subtitulo">Esta es la app para estacionar mas de grande Argentina. Nunca mas debera estar buscando un lugar para estacionar. </br>Directamente estacione !!</h5>
   </section>
+
+
+  <!-- Section Listado -->
+  <section class="section-listado" id="section-listado">
+          <div class="section-listado-info" >
+             <h3>Listado de Estacionamientos</h3>
+             <p>Aqui podra obserda los estacionamientos con lugar disponibles segun su ubicacion</p>
+          </div>
+          <div class="section-listado-tabla">
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Lugar</th>
+                  <th scope="col">Precio/h</th>
+                  <th scope="col" >Cantidad Lugares</th>
+                </tr>
+              </thead>
+              <tbody id="t-body">
+               
+              </tbody>
+            </table>
+          </div>
+  </section>
+
+
 
   <!-- Modal Login  -->
   <div class="modal" id="modal-login" tabindex="-1">
@@ -48,17 +74,23 @@
 
 
         <div class="modal-body">
-          <form>
+          <form id="form-login">
             <div class="form-group">
               <label for="exampleFormControlInput1" class="eti-input">Usuario</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input type="text" class="form-control" id="input-user" placeholder="name@example.com">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlInput1" class="eti-input">Password</label>
-              <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <label for="exampleFormControlInput2" class="eti-input">Password</label>
+              <input type="password" class="form-control" id="input-contraseña-login" placeholder="name@example.com">
             </div>
+            <div class="ckeckbox">
+              <label>
+                <input type="checkbox" value="0" id="checkbox-recordar">Recordarme en este navegador
+              </label>
+           </div>
             <button class="btn btn-success btn-stilos">Ingresar</button>
-            <span></span>
+            
+            <span class="span-mensaje"></span>
           </form>
         </div>
 
@@ -66,7 +98,7 @@
 
     </div>
   </div>
-
+  
 
   <!-- Modal Registrar -->
   <div class="modal" id="modal-registro" tabindex="-1">
@@ -80,23 +112,27 @@
 
 
         <div class="modal-body">
-          <form>
+          <form id="form-registrar">
             <div class="form-group">
-              <label for="exampleFormControlInput1" class="eti-input">Usuario</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Perro12">
+              <label for="" class="eti-input">Usuario</label>
+              <input type="text" class="form-control gg" id="inp-usuario-registro" placeholder="Perro12">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlInput1" class="eti-input">Password</label>
-              <input type="password" class="form-control" id="exampleFormControlInput1"
+              <label for="" class="eti-input">Correo</label>
+              <input type="email" class="form-control gg" id="inp-usuario-correo" placeholder="ejemplo@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="" class="eti-input">Password</label>
+              <input type="password" class="form-control" id="inp-contraseña-registro"
                 placeholder="Ingrese una contraseña">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlInput1" class="eti-input"> Repetir Password</label>
-              <input type="password" class="form-control" id="exampleFormControlInput1"
+              <label for="" class="eti-input"> Repetir Password</label>
+              <input type="password" class="form-control" id="inp-Rcontraseña-registro"
                 placeholder="Ingrese una contraseña">
             </div>
-            <button class="btn btn-success">Ingresar</button>
-            <span></span>
+            <button id="btn-registrar" class="btn btn-success btn-stilos">Registrar</button>
+            <span class="span-mensaje-registro" id="span-mensaje-registro">Campos no completado y/o contraseñas no iguales</span>
           </form>
         </div>
 
@@ -104,6 +140,9 @@
 
     </div>
   </div>
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
